@@ -23,7 +23,7 @@ def multiply(a: int, b: int) -> int:
     return a * b
 
 def divide(a: int, b: int) -> float:
-    """Adds a and b.
+    """Divides a by b.
 
     Args:
         a: first int
@@ -58,4 +58,4 @@ builder.add_conditional_edges(
 builder.add_edge("tools", "assistant")
 
 # Compile graph
-graph = builder.compile()
+graph = builder.compile(interrupt_before=["tools"])
